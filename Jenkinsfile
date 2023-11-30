@@ -42,7 +42,7 @@ pipeline {
             steps {
                 script {
                     echo "Pushing to Git..."
-                    withCredentials([sshUserPrivateKey(credentialsId: 'Jenkins', keyFileVariable: 'SSH_KEY_CREDENTIAL')]) {
+                    withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-ssh', keyFileVariable: 'SSH_KEY_CREDENTIAL')]) {
                         sh 'git config --global user.email "your_email@example.com"'
                         sh 'git config --global user.name "busolami"'
                         sh 'git status'
