@@ -45,7 +45,7 @@ pipeline {
                     withCredentials([sshUserPrivateKey(credentialsId: 'jenkins-ssh', keyFileVariable: 'SSH_KEY_CREDENTIAL')]) {
                         sh 'git remote set-url origin git@github.com:busolagbadero/java-maven-version.git'
                         sh 'git add .'
-                        sh 'git commit -m "JENKINSCII to GIT"'
+                        sh 'git commit -m "JENKINSCID to GIT"'
                         sh 'git push origin HEAD:master'
                     }
                 }
